@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+<!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"-->
+<link href="./fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+<!-- Our project just needs Font Awesome Solid + Brands -->
+<link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+<link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+<link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<title>Joue et Sauve Le Monde !</title>
+</head>
+<body class="container-fluid">
+<header>
+  <h2 id="titre1" class="my-5">Joue et Sauve Le Monde !</h2>
+  <div id="titre2">
+    <h3>Problème tous niveaux</h3>
+    <h4>Solution à remettre à la fin du confinement (les parents peuvent jouer)</h4>
+  </div>
+  <div id="enonce">
+    <h3><span class="underline">Intitulé du problème 1</span>*</h3>
+    <h4>
+      <span class="bold">Sachant que : </span><br>
+      Pétrole
+      <sup id="note-1" class="notes">
+        <a href="#cite_note-1">
+          1
+        </a>
+      </sup>
+       &nbsp; 
+        <i class="fas fa-arrow-right"></i>
+      &nbsp; PIB + CO2 
+      <sup id="note-2" class="notes">
+        <a href="#cite_note-2">
+          2
+        </a>
+      </sup>
+          <i class="fas fa-arrow-right"></i></a>&nbsp; <br>
+      <i class="fas fa-arrow-alt-circle-right baisse"></i> 
+      Biodiversité <i class="fas fa-plus"></i> 
+      <i class="fas fa-arrow-alt-circle-right hausse"></i> 
+      &nbsp;Migrations climatiques <i class="fas fa-plus"></i> 
+      <i class="fas fa-arrow-right baisse"></i> &nbsp;Rendements agricoles 
+      <i class="fas fa-plus"></i> <i class="fas fa-arrow-right hausse"></i> 
+      &nbsp;Événements climatiques extrêmes <i class="fas fa-arrow-right"></i> <br>
+      <span class="red uppercase">game over</span>
+    </h4>
+    <h4 id="consigne">Comment faire en sorte que <img src="./img/barreGO.png" alt="decoration" width="110px"> ?
+    </h4>
+  </div>
+</header>
+  
+
+  <main class="container">
+
+    <div id="debut">
+      <h3>
+        Cliquer pour commencer
+      </h3>
+    </div>
+    <!-- cases choix initiaux -->
+    <div class="row">
+      <div id="choix01" class="col-3 offset-2 choix">
+        <i class="fas fa-angle-double-down"></i>
+        <p class="bold my-0">Capter CO2</p>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+
+      <div id="choix02" class="col-3 offset-2 choix nivViolets">
+        <i class="fas fa-angle-double-down"></i>
+        <p class="bold my-0"><i class="fas fa-arrow-alt-circle-right baisse"></i> pétrole</p>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+    </div>
+
+    <!-- si choix01 capter CO2 -->
+    <div id="choix01capterCO2">
+      <div class="row">
+        <section id="niv111" class="col-6 niveaux">
+          <h4>Un peu</h4>
+        </section>
+
+        <section id="niv112" class="col-6 niveaux">
+          <h4>Massivement</h4>
+        </section>
+      </div>
+
+      <!-- si choix niv111 un peu -->
+      <div class="row">
+        <section id="niv113" class="col-12 niveaux nivViolets">
+          <h4>Stockage dans sol et végétaux</h4>
+        </section>
+      </div>
+
+      <div class="row">
+        <section id="niv114" class="col-12 niveaux">
+          <h4>dommage, pas
+            assez vite !
+            <sup id="note-3" class="notes">
+              <a href="#cite_note-3">
+                3
+              </a>
+            </sup>
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv115" class="col-12 niveaux">
+          <h4 class="red uppercase">game over</h4>
+        </section>
+      </div>
+
+      <!-- si choix niv112 massivement -->
+      <div class="row">
+        <section id="niv121" class="col-12 niveaux">
+          <h4>
+            qui va payer sans en retirer de bénéfice monétaire et en 
+            consommant des ressources ?
+          </h4>
+        </section>
+      </div>
+
+      <!-- Avec choix niv121 massivement -->
+      <div class="row">
+        <section id="niv122" class="col-6 niveaux">
+          <h4>Personne</h4>
+        </section>
+        <!-- ou -->
+        <section id="niv123" class="col-6 niveaux">
+          <h4>À toi de trouver</h4>
+        </section>
+      </div>
+      
+      <!-- si choix niv122 personne -->
+      <div class="row">
+        <section id="niv124" class="col-12 niveaux">
+          <h4 class="red uppercase">game over</h4>
+        </section>
+      </div>
+
+      <!-- si choix niv123 à toi de trouver -->
+      <div class="row">
+        <section id="niv125" class="col-12 niveaux">
+          <h4>? ? ?</h4>
+        </section>
+      </div>
+    </div>
+
+    <div id="choix02baisserPetrole">
+      <div class="row">
+        <section id="niv211" class="col-6 niveaux nivViolets">
+          <h4>
+            <i class="fas fa-arrow-alt-circle-right hausse"></i>
+             efficacité énergétique
+          </h4>
+        </section>
+        <section id="niv212" class="col-6 niveaux nivViolets branche">
+          <h4>
+            <i class="fas fa-arrow-alt-circle-right baisse"></i>
+             pétrole / personne
+          </h4>
+        </section>
+        <section id="niv213" class="col-6 niveaux nivViolets branche">
+          <h4>
+            <i class="fas fa-arrow-alt-circle-right baisse"></i>
+             population
+          </h4>
+        </section>
+        <section id="niv214" class="col-6 niveaux nivViolets branche">
+          <h4>
+            Combinaison de tout
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 211 +efficacité nrgétique -->
+      <div class="row">
+        <section id="niv215" class="col-12 niveaux nivViolets">
+          <h4>
+            Dommage, trop lent !
+            <sup id="note-4" class="notes">
+              <a href="#cite_note-4">
+                4
+              </a>
+            </sup>
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv216" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 212 -pétrole / personne -->
+      <div class="row">
+        <section id="niv221" class="col-6 niveaux nivRoses">
+          <h4>
+            Abandon
+          </h4>
+        </section>
+        <section id="niv222" class="col-6 niveaux nivViolets branche">
+          <h4>
+            Remplacement
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 221 abandon -->
+      <div class="row">
+        <section id="niv223" class="col-12 niveaux nivRoses">
+          <h4>
+            <i class="fas fa-arrow-alt-circle-right baisse"></i>
+             PIB
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv224" class="col-12 niveaux nivRoses">
+          <h4>
+            <i class="fas fa-arrow-alt-circle-right hausse"></i>
+             dette française
+          </h4>
+        </section>
+      </div>
+      <div class="row branche nivRoses">
+        <section id="niv225" class="col-12 niveaux">
+          <h4>
+            Faillite État
+          </h4>
+        </section>
+      </div>
+
+      <div class="row">
+        <section id="niv231" class="col-6 niveaux nivRoses">
+          <h4>
+            <i class="fas fa-arrow-alt-circle-right baisse"></i>
+             santé publique
+          </h4>
+        </section>
+        <section id="niv232" class="col-6 niveaux nivRoses">
+          <h4>
+            <i class="fas fa-arrow-alt-circle-right baisse"></i>
+             éducation
+          </h4>
+        </section>
+        <section id="niv233" class="col-6 niveaux nivRoses">
+          <h4>
+            <i class="fas fa-arrow-alt-circle-right baisse"></i>
+             transport
+          </h4>
+        </section>
+        <section id="niv234" class="col-6 niveaux nivRoses">
+          <h4>
+            <i class="fas fa-arrow-alt-circle-right baisse"></i>
+             justice-sécurité
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 231 -santé -->
+      <div class="row">
+        <section id="niv235" class="col-12 niveaux nivRoses">
+          <h4>
+            <i class="fas fa-arrow-alt-circle-right baisse"></i>
+             <span class="bold">espérance de vie</span>
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv236" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 232 -éducation -->
+      <div class="row">
+        <section id="niv241" class="col-12 niveaux nivRoses">
+          <h4>
+            <span class="bold">Relocalisation</span>
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv242" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 233 -transport -->
+      <div class="row">
+        <section id="niv243" class="col-12 niveaux nivRoses">
+          <h4>
+            <span class="bold">Relocalisation</span>
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv244" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 234 justice-sécurité -->
+      <div class="row">
+        <section id="niv251" class="col-12 niveaux nivRoses">
+          <h4>
+            <span class="bold">Autodéfense</span>
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv252" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 222 remplacement -->
+      <div class="row">
+        <section id="niv253" class="col-6 niveaux nivViolets">
+          <h4>
+            Éolien-solaire...
+          </h4>
+        </section>
+        <section id="niv254" class="col-6 niveaux nivViolets">
+          <h4>
+            Biocarburants
+          </h4>
+        </section>
+        <section id="niv255" class="col-6 niveaux nivViolets">
+          <h4>
+            Biomasse
+          </h4>
+        </section>
+        <section id="niv256" class="col-6 niveaux nivViolets">
+          <h4>
+            Fusion froide
+          </h4>
+        </section>
+        <section id="niv257" class="col-6 offset-3 niveaux nivViolets">
+          <h4>
+            Nouvelle technologie
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 253 ENR -->
+      <div class="row">
+        <section id="niv261" class="col-12 niveaux nivViolets">
+          <h4>
+            Trop consommateur en métaux et surfaces
+            <sup id="note-5" class="notes">
+              <a href="#cite_note-5">
+                5
+              </a>
+            </sup>
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv262" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 254 biocarburants -->
+      <div class="row">
+        <section id="niv263" class="col-12 niveaux nivViolets">
+          <h4>
+            Concurrence alimentaire
+            <sup id="note-6" class="notes">
+              <a href="#cite_note-6">
+                6
+              </a>
+            </sup>
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv264" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 255 biomasse -->
+      <div class="row">
+        <section id="niv271" class="col-12 niveaux nivViolets">
+          <h4>
+            Pas du tout assez !
+            <sup id="note-7" class="notes">
+              <a href="#cite_note-7">
+                7
+              </a>
+            </sup>
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv272" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 256 fusion froide -->
+      <div class="row">
+        <section id="niv273" class="col-12 niveaux nivViolets">
+          <h4>
+            Haha...
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv274" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 247 nouv. techno -->
+      <div class="row">
+        <section id="niv275" class="col-12 niveaux nivViolets">
+          <h4>
+            Dommage, trop tard !
+            <sup id="note-8" class="notes">
+              <a href="#cite_note-8">
+                8
+              </a>
+            </sup>
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv276" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 213 -population -->
+      <div class="row">
+        <section id="niv281" class="col-4 niveaux nivRoses">
+          <h4>
+            Famine mondiale
+          </h4>
+        </section>
+        <section id="niv282" class="col-4 niveaux nivRoses">
+          <h4>
+            Guerre mondiale
+          </h4>
+        </section>
+        <section id="niv283" class="col-4 niveaux nivRoses">
+          <h4>
+            Epidémie mondiale
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 281 282 283 -->
+      <div class="row">
+        <section id="niv284" class="col-12 niveaux nivRoses">
+          <h4>
+            <span class="bold">
+              Ça se tente ?
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 214 combi de tout -->
+      <div class="row">
+        <section id="niv291" class="col-6 niveaux nivViolets">
+          <h4>
+            Un peu
+          </h4>
+        </section>
+        <section id="niv292" class="col-6 niveaux nivViolets">
+          <h4>
+            Tous les leviers à fond ?
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 291 un peu -->
+      <div class="row">
+        <section id="niv293" class="col-12 niveaux nivViolets">
+          <h4>
+            Dommage, trop faible !
+          </h4>
+        </section>
+      </div>
+      <div class="row">
+        <section id="niv294" class="col-12 niveaux">
+          <h4>
+            <span class="red uppercase">
+              game over
+            </span>
+          </h4>
+        </section>
+      </div>
+
+      <!-- si choix 292 un peu -->
+      <div class="row">
+        <section id="niv2020" class="col-12 niveaux nivViolets">
+          <h4>
+            <span class="bold">
+              Faut s'y mettre tous, à fond, tout de suite !
+            </span>
+          </h4>
+          <h4>
+            <span>
+              Bravo !<br>C'est la solution la plus viable.<br>
+              Rejoins une association<br>si tu veux aider :)
+            </span>
+          </h4>
+        </section>
+      </div>
+
+
+
+    </div>
+
+    <div id="cite_notes">
+      <h5>
+        Références
+      </h5>
+      <ol><!-- Code pris sur https://fr.wikipedia.org -->
+        <li id="cite_note-1">
+          <span class="mw-cite-backlink noprint">
+            <a href="#note-1" aria-label="Revenir plus haut" title="Revenir plus haut">
+              ↑
+            </a> 
+          </span>
+          <span class="note-text">
+            vidéo de Jean-Marc Jancovici, expert énergie-climat :
+            <a href="https://www.youtube.com/watch?v=h9SuWi_mtCM" target="_blank">
+              https://www.youtube.com/watch?v=h9SuWi_mtCM
+            </a>
+            ou sous forme de texte 
+            <a href="https://jancovici.com/changement-climatique/economie/la-croissance-economique-fait-elle-de-leffet-de-serre/" target="_blank">
+              https://jancovici.com/changement-climatique/economie/la-croissance-economique-fait-elle-de-leffet-de-serre/
+            </a>
+            et
+            <a href="https://jancovici.com/transition-energetique/choix-de-societe/quelques-reflexions-sur-la-transition-energetique/" target="_blank">
+              https://jancovici.com/transition-energetique/choix-de-societe/quelques-reflexions-sur-la-transition-energetique/
+            </a>
+          </span>
+        </li>
+        <hr>
+        <li id="cite_note-2">
+          <span class="mw-cite-backlink noprint">
+            <a href="#note-2" aria-label="Revenir plus haut" title="Revenir plus haut">
+              ↑
+            </a> 
+          </span>
+          <span class="note-text">
+            article portant sur le rapport spécial du GIEC (IPCC en anglais) sur le changement climatique et les sols :
+            <a href="https://www.climat.be/fr-be/changements-climatiques/les-rapports-du-giec/2019-rapport-special-sur-lutilisation-des-sols" target="_blank">
+              https://www.climat.be/fr-be/changements-climatiques/les-rapports-du-giec/2019-rapport-special-sur-lutilisation-des-sols
+            </a>
+            voire le rapport lui-même (en anglais) 
+            <a href="https://www.ipcc.ch/srccl/chapter/summary-for-policymakers/" target="_blank">
+              https://www.ipcc.ch/srccl/chapter/summary-for-policymakers/
+            </a>
+          </span>
+        </li>
+        <hr>
+        <li id="cite_note-3">
+          <span class="mw-cite-backlink noprint">
+            <a href="#note-2" aria-label="Revenir plus haut" title="Revenir plus haut">
+              ↑
+            </a> 
+          </span>
+          <span class="note-text">
+            Référence à l’initiative 4/1000 qui vise à augmenter le 
+            taux de carbone dans tous les sols de la planète de 0,4%/an 
+            pour stopper l’augmentation de CO2 dans l’atmosphère : 
+            <a href="https://agriculture.gouv.fr/infographie-4-pour-1000-la-sequestration-du-carbone-dans-les-sols" target="_blank">
+              https://agriculture.gouv.fr/infographie-4-pour-1000-la-sequestration-du-carbone-dans-les-sols
+            </a>
+            et plus en détail sur 
+            <a href="https://www.4p1000.org/fr" target="_blank">
+              https://www.4p1000.org/fr
+            </a>
+            . A première vue, ça paraît simple et facile ! A l’échelle d’une parcelle agricole, c’est sans doute vrai, 
+            mais à l’échelle de la planète avec en particulier les sols forestiers dont on ne sait pas augmenter le taux de carbone...
+            <a href="https://www.inrae.fr/actualites/stocker-4-1000-carbone-sols-potentiel-france" target="_blank">
+              https://www.inrae.fr/actualites/stocker-4-1000-carbone-sols-potentiel-france
+            </a>
+            . Par ailleurs, avec l’initiative 4/1000, on continue à acidifier les océans...
+            Une autre approche possible consiste à planter des arbres autant que nécessaire pour compenser les émissions humaines de 
+            gaz à effets de serre. Un calcul de moi-même en comptant 200kg de CO2 stocké par arbre et 1000 plants / hectare amène à 
+            considérer qu’il faudrait transformer 1/6ème des surfaces arables tous les ans en forêt...
+          </span>
+        </li>
+        <hr>
+        <li id="cite_note-4">
+          <span class="mw-cite-backlink noprint">
+            <a href="#note-2" aria-label="Revenir plus haut" title="Revenir plus haut">
+              ↑
+            </a> 
+          </span>
+          <span class="note-text">
+            On l’a vu, l’énergie est très fortement corrélée au PIB. L’augmentation de l’efficacité énergétique suppose donc de décorréler 
+            croissance du PIB et consommation d’énergie, et/ou de réduire fortement les émissions de CO2 par unité d’énergie produite. 
+            Pour le lien PIB-Énergie, on peut faire référence à ça : 
+            <a href="https://theshiftproject.org/lien-pib-energie/" target="_blank">
+              https://theshiftproject.org/lien-pib-energie/
+            </a>
+            et sur les problèmes de décorrélation à ça : <a href="http://www.chair-energy-prosperity.org/wp-content/uploads/2018/09/publication2018-methodologie-analyse-scenario-climat.pdf" target="_blank">
+              http://www.chair-energy-prosperity.org/wp-content/uploads/2018/09/publication2018-methodologie-analyse-scenario-climat.pdf
+            </a>. Pour la réduction du CO2 par unité d’énergie produite, cela demande une évolution du mix énergétique (extrêmement gourmand 
+            en capitaux) et/ou une captation du CO2 là où il est produit.<br>
+            Les tendances historiques ne sont pas bonnes : 
+            <a href="https://donnees.banquemondiale.org/indicateur/EN.ATM.CO2E.EG.ZS" target="_blank">
+              https://donnees.banquemondiale.org/indicateur/EN.ATM.CO2E.EG.ZS
+            </a> et
+            <a href="https://theshiftdataportal.org/energy/energy-intensity-gdp?chart-type=line&chart-types=line&chart-types=ranking&disable-en=false&energy-unit=toe&group-names=World&is-range=true&gd
+            p-unit=GDP%20(constant%202010%20US%24)&energy-type=Total%20Primary%20Oil%20Consumption&dimension=total&end=2016&start=1980&multi=true" target="_blank">
+              https://theshiftdataportal.org/energy/energy-intensity-gdp?chart-type=line&chart-types=line&chart-types=ranking&disable-en=false&energy-unit=toe&group-names=World&is-range=true&gd
+              p-unit=GDP%20(constant%202010%20US%24)&energy-type=Total%20Primary%20Oil%20Consumption&dimension=total&end=2016&start=1980&multi=true
+            </a>
+          </span>
+        </li>
+        <hr>
+        <li id="cite_note-5">
+          <span class="mw-cite-backlink noprint">
+            <a href="#note-2" aria-label="Revenir plus haut" title="Revenir plus haut">
+              ↑
+            </a> 
+          </span>
+          <span class="note-text">
+            par exemple :
+            <a href="https://www.novethic.fr/actualite/energie/transition-energetique/isr-rse/le-chiffre-transition-energetique-la-demande-de-metaux-pourrait-bondir-de-1-000-dans-un-scenario-2-c-144793.html" target="_blank">
+              https://www.novethic.fr/actualite/energie/transition-energetique/isr-rse/le-chiffre-transition-energetique-la-demande-de-metaux-pourrait-bondir-de-1-000-dans-un-scenario-2-c-144793.html
+            </a>
+            & 
+            <a href="http://www.mineralinfo.fr/page/besoins-en-ressources-minerales-realiser-transition-energetique"" target="_blank" rel="noopener noreferrer">
+              http://www.mineralinfo.fr/page/besoins-en-ressources-minerales-realiser-transition-energetique"
+            </a><br>
+            On notera que la part des ENR est passée de 13% en 1971 à 14% en 2016...
+          </span>
+        </li>
+        <hr>
+        <li id="cite_note-6">
+          <span class="mw-cite-backlink noprint">
+            <a href="#note-2" aria-label="Revenir plus haut" title="Revenir plus haut">
+              ↑
+            </a> 
+          </span>
+          <span class="note-text">
+            Avec peu d’énergie fossile, l’agriculture aura déjà du mal à nourrir toute l’humanité. Par ailleurs, selon un rapport 
+            de la DIREN/ADEME, pour remplacer l’intégralité du pétrole utilisé dans les transports, il faudrait consacrer 66 % du 
+            territoire français à la culture du colza, ou 86 % du territoire à la culture du tournesol :
+            <a href="https://www.lci.fr/sciences/les-biocarburants-a-l-ethanol-au-colza-ou-a-l-huile-de-palme-c-est-bon-ou-c-est-mauvais-pour-l-environnement-2090105.html" target="_blank">
+              https://www.lci.fr/sciences/les-biocarburants-a-l-ethanol-au-colza-ou-a-l-huile-de-palme-c-est-bon-ou-c-est-mauvais-pour-l-environnement-2090105.html
+            </a>
+          </span>
+        </li>
+        <hr>
+        <li id="cite_note-7">
+          <span class="mw-cite-backlink noprint">
+            <a href="#note-2" aria-label="Revenir plus haut" title="Revenir plus haut">
+              ↑
+            </a> 
+          </span>
+          <span class="note-text">
+            Selon l’ADEME, dans le cas le plus favorable, en 2035, les forêts françaises seront capable de produire 10 Mm3 bois 
+            supplémentaire / an, soit 3,8 MTep, soit environ 2% de la consommation actuelle nationale : 
+            <a href="https://www.ademe.fr/disponibilites-forestieres-lenergie-materiaux-a-lhorizon-2035" target="_blank">
+              https://www.ademe.fr/disponibilites-forestieres-lenergie-materiaux-a-lhorizon-2035
+            </a>
+          </span>
+        </li>
+        <hr>
+        <li id="cite_note-7">
+          <span class="mw-cite-backlink noprint">
+            <a href="#note-2" aria-label="Revenir plus haut" title="Revenir plus haut">
+              ↑
+            </a> 
+          </span>
+          <span class="note-text">
+            le développement industriel du nucléaire nouvelle génération ne pourra se faire avant 30 ans : 
+            <a href="https://youtu.be/RIlh1MT9WsQ?t=4225" target="_blank">
+              https://youtu.be/RIlh1MT9WsQ?t=4225
+            </a>
+            (calé à 1:10:25).<br>
+            En Allemagne, malgré les investissements massifs depuis le début des années 2000, avec des ENR représentant &gt; 40% 
+            de l’électricité, le pays dépend toujours à plus de 75% des fossiles si l’on considère l’intégralité de ses besoins 
+            énergétiques.
+          </span>
+        </li>
+      </ol>
+    </div>
+
+  </main>
+  
+    
+  
+    
+    <script type="text/javascript" src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

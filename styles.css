@@ -1,0 +1,238 @@
+:root {
+  --violet: #8805ad;
+  --rose: #a5749f;
+  --blanc: #fafafa;
+}
+body {
+  background-color: grey;
+}
+
+/***************************************/
+/************** header  ****************/
+/***************************************/
+
+header {
+  width: 100%;
+}
+
+/***************  titres *****************/
+
+h2#titre1 {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0!important;
+  z-index: 10;
+}
+#titre2 {
+  font-size: 1.3rem;
+  padding: 5px;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: -3px;
+  background-color: var(--rose);
+  border: 1px solid var(--blanc);
+  color: white;
+  text-align: center;
+  z-index: -10;
+  border-radius: 5px;;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#titre2 h4 {
+  font-size: 1.25rem;
+}
+#enonce {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: var(--blanc);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+#enonce h3 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/**** écrans =< 600px ************/
+@media only screen and (max-width: 600px) {
+  h2#titre1 {
+    background-image: url(./img/fondTitre1-xs.png);
+    height: 25px;
+    font-size: 1.6rem;
+  }
+  #titre2 {
+    position: relative;
+    top: -3px;
+  }
+}
+
+/**** écrans > 600px *****************/
+@media only screen and (min-width: 601px) {
+  h2#titre1 {
+    background-image: url(./img/fondTitre1-lg.png);
+    background-size: cover;
+    height: 75px;
+    font-size: 1.6rem;
+    line-height: 5rem;
+  }
+  #titre2 {
+    position: relative;
+    top: -6px;
+  }
+}
+
+/******************************************************/
+/******************  main  ****************************/
+/******************************************************/
+
+main {
+  margin-bottom: 100px;
+}
+
+/******************  #debut  ***************************/
+
+#debut {
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 0;
+  background-color: var(--blanc);
+}
+
+/******************  .choix  ***************************/
+
+/*  #choix01, #choix02 {  */
+.choix {
+  border: 1px solid grey;
+  text-align: center;
+  background-color: var(--blanc);
+}
+
+/*****************  .niveaux  **************************/
+
+.niveaux {
+  border: 1px solid grey;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  padding: 5px;
+  text-align: center;
+  background-color: var(--blanc);
+}
+.niveaux:hover, .choix:hover {
+  cursor: pointer;
+}
+#niv115:hover, #niv124:hover, #niv125:hover, #niv216:hover, 
+#niv236:hover, #niv242:hover, #niv244:hover, #niv252:hover, 
+#niv262:hover, #niv264:hover, #niv272:hover, #niv274:hover, 
+#niv276:hover, #niv284:hover, #niv2020:hover {
+  cursor: default;
+}
+
+/*************  #cite_notes  *****************/
+
+#cite_notes {
+  background-color: var(--blanc);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  margin-top: 100px;
+  padding: 5px;
+}
+#cite_notes ol {
+  padding-left: 20px;
+}
+
+/**** écrans =< 600px ************/
+@media only screen and (max-width: 600px) {
+  /*  vide  */
+}
+
+/**** écrans > 600px ************/
+@media only screen and (min-width: 600px) {
+  #debut {
+    height: 50px;
+    padding: 10px;
+  }
+  .choix, .niveaux {
+    min-height: 100px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  .choix {
+    padding-top:20px;
+  }
+  .niveaux {
+    padding-top:30px;
+  }
+}
+
+/************ classes ***************/
+
+.bold {
+  font-weight: bold;
+}
+.bold18 {
+  font-weight: bold;
+  font-size: 18px;
+}
+.underline {
+  text-decoration: underline;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+i.fas {
+  font-size: 14px;;
+}
+i.hausse {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+i.baisse {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.nivViolets {
+  color: var(--violet);
+}
+.nivRoses {
+  color: var(--rose);
+}
+.branche {
+  background-color: bisque;
+}
+
+
+
+
+
+
+
+
+
+
