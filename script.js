@@ -2,6 +2,7 @@
 //  fonctions afficher() cacher()
 afficher = (elem) => {
   elem.style.display = 'block';
+//  elem.style.transition = "all 2s";
 }
 cacher = (elem) => {
   elem.style.display = 'none';
@@ -18,7 +19,9 @@ for(niv of niveaux) {
 
 //  Clic #debut : afficher les 2 choix
 debut.addEventListener('click', () => {
-  choix02.className = "col-3 offset-2 choix nivViolets";
+  choix01.className = "col-3 offset-2 choix transitions";
+  choix02.className = "col-3 offset-2 choix nivViolets transitions";
+  
   afficher(debut);
 
   for(chx of choix) {
@@ -32,7 +35,7 @@ debut.addEventListener('click', () => {
 
 //  choix01 capter CO2
 choix01.addEventListener('click', () => {
-  choix01.className = "col-6 niveaux branche";
+  choix01.classList.add('branche');
   niv111.className = "col-6 niveaux";
   niv112.className = "col-6 niveaux";
   
@@ -95,7 +98,7 @@ niv112.addEventListener('click', () => {
   afficher(niv121);
 })
 niv121.addEventListener('click', () => {
-  niv121.className = 'col-12 niveaux branche';
+  niv121.classList.add('branche');
   niv122.className = 'col-6 niveaux';
   niv123.className = 'col-6 niveaux';
 
@@ -143,7 +146,7 @@ niv123.addEventListener('click', () => {
 
 //  choix02 baisserPet
 choix02.addEventListener('click', () => {
-  choix02.className = 'col-3 offset-7 choix branche';
+  choix02.className = 'col-3 offset-7 choix nivViolets  branche';
   niv211.className = 'col-6 niveaux nivViolets';
   niv212.className = 'col-6 niveaux nivViolets';
   niv213.className = 'col-6 niveaux nivViolets';
@@ -187,7 +190,7 @@ niv215.addEventListener('click', () => {
 
 //  choix niv212 baisserPet
 niv212.addEventListener('click', () => {
-  niv212.className = "col-12 niveaux nivViolets branche";
+  niv212.classList.add('branche');
   niv221.className = "col-6 niveaux nivRoses";
   niv222.className = "col-6 niveaux nivViolets";
 
@@ -242,7 +245,7 @@ niv224.addEventListener('click', () => {
 })
 //  niv225 baisserPet
 niv225.addEventListener('click', () => {
-  niv225.className = "col-12 niveaux nivRose branche";
+  niv225.classList.add('branche');
   niv231.className = "col-6 niveaux nivRoses";
   niv232.className = "col-6 niveaux nivRoses";
   niv233.className = "col-6 niveaux nivRoses";
@@ -410,7 +413,7 @@ niv251.addEventListener('click', () => {
 })
 //  choix niv222 baisserPet
 niv222.addEventListener('click', () => {
-  niv222.className = "col-12 niveaux branche nivViolets";
+  niv222.classList.add('branche');
 
   niv253.className = "col-6 niveaux nivViolets";
   niv254.className = "col-6 niveaux nivViolets";
@@ -589,7 +592,7 @@ niv275.addEventListener('click', () => {
 })
 //  choix niv213 baisserPet
 niv213.addEventListener('click', () => {
-  niv213.className = "col-12 niveaux nivViolets branche";
+  niv213.classList.add('branche');
   niv281.className = "col-4 niveaux nivRoses";
   niv282.className = "col-4 niveaux nivRoses";
   niv283.className = "col-4 niveaux nivRoses";
@@ -647,7 +650,7 @@ niv283.addEventListener('click', () => {
 })
 //  choix niv214 baisserPet
 niv214.addEventListener('click', () => {
-  niv214.className = "col-12 niveaux nivViolets branche";
+  niv214.classList.add('branche');
   niv291.className = "col-6 niveaux nivViolets";
   niv292.className = "col-6 niveaux nivViolets";
 

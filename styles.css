@@ -106,6 +106,7 @@ main {
   margin-top: 20px;
   margin-bottom: 0;
   background-color: var(--blanc);
+  box-shadow: -2px 2px 5px silver;
 }
 
 /******************  .choix  ***************************/
@@ -115,6 +116,7 @@ main {
   border: 1px solid grey;
   text-align: center;
   background-color: var(--blanc);
+  box-shadow: -2px 2px 5px silver;
 }
 
 /*****************  .niveaux  **************************/
@@ -128,9 +130,11 @@ main {
   padding: 5px;
   text-align: center;
   background-color: var(--blanc);
+  box-shadow: -2px 2px 5px silver;
 }
-.niveaux:hover, .choix:hover {
+#debut:hover, .niveaux:hover, .choix:hover {
   cursor: pointer;
+  background-color: silver;
 }
 #niv115:hover, #niv124:hover, #niv125:hover, #niv216:hover, 
 #niv236:hover, #niv242:hover, #niv244:hover, #niv252:hover, 
@@ -227,7 +231,14 @@ i.baisse {
   background-color: bisque;
 }
 
-
+/****************************************************************/
+/***********************  .transitions **************************/
+/****************************************************************/
+/*
+.transitions {
+  transition-duration: 5s;
+}
+*/
 
 
 
